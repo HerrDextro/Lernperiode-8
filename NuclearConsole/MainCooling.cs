@@ -13,6 +13,7 @@ namespace NuclearConsole
         string status;
         public MainCooling(int numPumps, int pumpFlowRate)
         {
+            pumps = new List<Pump>();
             for (int i = 0; i < numPumps; i++)
             {
                 pumps.Add(new Pump());

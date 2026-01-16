@@ -11,6 +11,7 @@ namespace NuclearConsole
         List<Pump> pumps;
         public SecondaryCooling(int numPumps, int pumpFlowRate)
         {
+            pumps = new List<Pump>();
             for (int i = 0; i < numPumps; i++)
             {
                 pumps.Add(new Pump());
