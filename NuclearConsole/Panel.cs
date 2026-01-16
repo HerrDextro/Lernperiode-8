@@ -5,7 +5,7 @@ using Spectre.Console;
 
 namespace NuclearConsole
 {
-    class Console
+    class Panel
     {
         Core reactorCore;
         MainCooling mainCoolingSystem;
