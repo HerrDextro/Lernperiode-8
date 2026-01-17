@@ -78,15 +78,17 @@ Der Benutzer kann Zustände einsehen, simulierte Aktionen auslösen und visuelle
    - Neues C#-Konsolenprojekt
    - Spectre.Console einrichten
 
-- [ ] **Grundlayout**
-   - Einfaches Dashboard mit Layout oder Panels erstellen
+- [x] **Grundlayout**
+   - Einfaches Testdashboard mit Layout oder Panels erstellen
 
 - [ ] **Erste Systemanzeige**
    - Tabelle mit 2–3 Reaktorsystemen und farbigen Statuswerten
 
-- [ ] **Testlauf**
+- [x] **Testlauf**
    - Sicherstellen, dass Layout, Farben und Darstellung stabil funktionieren
 
+
+Heute habe ich sehr viel am Backend gearbeitet. Ich habe jetzt 17 Classes wenn mann die MSTestsettings nicht zählt. Ich habe meine Classes mit MSTest tests getestet damit ich nacher kein Ärger damit habe. Da der Punkt für diese Lernperiode nicht ist, backends zu machen sonder eher um Spectre zu lernen, habe ich mit verschiedene Funktionen herumgespielt, um ein Reaktor "Strahlungsdiagramm" (gar nicht realistisches) zu erstellen.
 ---
 
 ### Nächste Woche – Arbeitspakete
