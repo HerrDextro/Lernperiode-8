@@ -110,13 +110,13 @@ Der Benutzer kann Zustände einsehen, simulierte Aktionen auslösen und visuelle
 
 
 - [ ] **Console-Finalisierung**
-   - Einfache `SystemStatus`-Struktur (Name, Zustand, Beschreibung)
+   - Leere Container vom Layout auch Panel geben (Graph, Tabelle, Liste)
 
 - [ ] **Echte Daten**
-   - Mehrere Panels und Tabellen in einem festen Layout kombinieren
+   - Echte und sinnvole Daten in jeder Container vom Layout rein
 
 - [ ] **Spectre Tutorial**
-   - Simulierte Prozesse mit Progress Bars (z. B. Kühlung stabilisieren)
+   - Ein Tutorial erstellen, womit jede Person ihre Console apps mit Spectre verbesern könnte
 
 ---
 
