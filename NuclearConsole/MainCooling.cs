@@ -5,18 +5,18 @@ using System.Text;
 
 namespace NuclearConsole
 {
-    class MainCooling
+    public class MainCooling
     {
         public int flowRate; //sum of all pumps
-        int _coolantTemp;
-        List<Pump> pumps;
+        public int coolantTemp;
+        public List<Pump> pumps;
         string status;
         public MainCooling(int numPumps, int pumpFlowRate)
         {
             pumps = new List<Pump>();
             for (int i = 0; i < numPumps; i++)
             {
-                pumps.Add(new Pump());
+                pumps.Add(new Pump("p" + (i+=1))); //names pumps p1 p2 etc (I hope)
                 flowRate += pumpFlowRate;
             }
         }
@@ -38,11 +38,11 @@ namespace NuclearConsole
         {
             //simple model: coolant temp increases by 1 degree for every 1000 units of heat output per minute, decreases by 5 degrees per minute due to ambient cooling
             double tempIncrease = heatOutput / 100;
-            _coolantTemp += (int)tempIncrease;
-            _coolantTemp -= (pumps.Count * flowRate / 50); //ok for now, try get more realism later
-            if (_coolantTemp < 20) //ambient temp floor
+            coolantTemp += (int)tempIncrease;
+            coolantTemp -= (pumps.Count * flowRate / 50); //ok for now, try get more realism later
+            if (coolantTemp < 20) //ambient temp floor
             {
-                _coolantTemp = 20;
+                coolantTemp = 20;
             }
         }
         public void DisplayCoolingStatus()

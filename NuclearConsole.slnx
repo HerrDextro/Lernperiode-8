@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="NuclearConsole/NuclearConsole.csproj" />
+  <Project Path="TDD1/TDD1.csproj" Id="74d3081d-88c2-464d-9a96-bc420f84c934" />
 </Solution>

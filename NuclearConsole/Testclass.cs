@@ -7,7 +7,7 @@ namespace NuclearConsole
 {
     static class Testclass
     {
-        public static void TestMethod()
+        public static void TestMethod1()
         {
 
             char mychar = '▀';
@@ -86,10 +86,110 @@ namespace NuclearConsole
                 )
             );
 
+            chart
+            .Width(60)
+            .Label("Reactor Power History");
+
+            chart.AddItem("Now", 73, Color.Green);
+            AnsiConsole.Write(chart);
+
+
 
 
 
         }
+
+        public static void TestMethod2()
+        {
+            //first the core overview:
+            var texture = File.ReadAllText(@"C:\\Users\\Neo\\source\\repos\\NuclearConsole\\NuclearConsole\\texture\\core.txt");
+            Console.Write(texture);
+            Console.WriteLine("");
+
+            //COOLING SYSTEM    
+            var coolingOverviewTable = new Table()
+                .AddColumn("Pump")
+                .AddColumn("Status")
+                .AddColumn("Flow")
+                .AddColumn("Temp")
+
+                .AddRow("P1", "[green]OK[/]", "100", "280")
+                .AddRow("P2", "[green]OK[/]", "70", "200");
+            AnsiConsole.Write(coolingOverviewTable);
+
+            //Turbine and Generator/Grid and power (MW, kV, Hz)
+            string electricalStats = ("RPM:        3000\r\nTorque:     12345\r\nPower:      980 MW\r\nVoltage:    20.1 kV\r\nFrequency:  50.00 Hz\r\n");
+            var panel = new Panel(electricalStats) //per default a square border, can make round too
+                .Header("Electrical Information"); //accepts header position, border type/color/thickness, order padding
+            AnsiConsole.Write(panel);
+
+            //Grid load graph(history)
+
+
+
+            //maintenace schedule (MUST IMPLEMENT somewhere, its too cool to skip)
+            var calendar = new Calendar(2025, 1)
+                .AddCalendarEvent(2025, 1, 15)
+                .AddCalendarEvent(2025, 1, 20)
+                .HighlightStyle(Style.Parse("yellow bold"));
+
+            AnsiConsole.Write(calendar);
+        }
+
+        public static void TestMethod3()
+        {
+            //CORE
+            Table coreTable = new Table();
+            coreTable.Border = TableBorder.None;
+
+            // Suppose 11 columns
+            for (int c = 0; c < 11; c++)
+                coreTable.AddColumn(new TableColumn("").Centered());
+
+            for (int y = 0; y < 11; y++)
+            {
+                var row = new List<string>();
+
+                for (int x = 0; x < 11; x++)
+                {
+                    // Example fake logic
+                    bool isFuel = (x + y) % 2 == 0;
+
+                    if (isFuel)
+                        row.Add("[red]██[/]");
+                    else
+                        row.Add("[grey]░░[/]");
+                }
+                coreTable.AddRow(row.ToArray());
+            }
+
+            AnsiConsole.Write(new Panel(coreTable).Header("Core"));
+
+            //FOR MAPPIGN TO CORE: MAKE CORE EXPOSE "CoreCell" or smt, as its own object with fuelrod/controlrod and temperature, render color based on temp
+
+            //Power draw history
+            Queue<double> history = new Queue<double>();
+            
+            history.Enqueue(50);
+            history.Enqueue(60);
+            history.Enqueue(80);
+            history.Enqueue(90);
+            history.Enqueue(100);
+
+            var chart = new BarChart()
+                .Width(60)
+                .Label("Load History");
+
+            foreach (var v in history)
+            {
+                chart.AddItem("", (float)v, Color.Green);
+            }
+            AnsiConsole.Write(chart);
+                
+
+        }
+
+
     }
 }
 

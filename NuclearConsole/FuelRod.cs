@@ -6,19 +6,19 @@ namespace NuclearConsole
 {
     class FuelRod
     {
-        public int usagePercent; //0-100 //every minute of use increases by 1%
+        public double usagePercent; //0-100 //every minute of use increases by 1%
         public int radsPerSecond; //rads per second 
-
-        public int UsagePercent
-        {
-            get { return usagePercent + Convert.ToInt16(TimeManager.GetUptimeMinutes); } //oko for now, add extra usage for highter heat outputs later
-            set { usagePercent = value; }
-        }
 
         public FuelRod()
         {
             usagePercent = 0;
             radsPerSecond = 10;
+        }
+        public void Update(double dt)
+        {
+            // 1% per minute => 1 / 60 % per second
+            usagePercent += (1.0 / 60.0) * dt;
+            usagePercent = Math.Min(100, usagePercent);
         }
     }
 }

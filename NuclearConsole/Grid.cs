@@ -1,54 +1,17 @@
-﻿using Spectre.Console;
+﻿using NuclearConsole.Physics;
+using Spectre.Console;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace NuclearConsole //test this later
 {
-    class Grid
+    public class Grid
     {
-        private static Grid _gridsim;
-        private Grid () { }
+        public double Frequency = 50;
+        public double Voltage = 380_000;
 
-        public static Grid GetGridSimulation(int frequency, int V)
-        {
-            if (_gridsim == null)
-            {
-                _gridsim = new Grid(frequency, V);
-            }
-            return _gridsim;
-        }
-
-        int _frequency;
-        int _V;
-        public double phase1;
-        public double phase2;
-        public double phase3;
-        public Grid(int frequency, int V)
-        {
-            _frequency = frequency;
-            _V = V;
-            ActivateGridSimulation();
-        }
-
-        private async Task ActivateGridSimulation()
-        {
-            int gridFrequency = _frequency;
-            //simulate each phase here based on frequency
-            while (true)
-            {
-                phase1 = GenerateSine(0);
-                phase2 = GenerateSine(120);
-                phase3 = GenerateSine(240);
-            }
-            
-        }
-        public double GenerateSine(double angleInDegrees)
-        {
-            double angleInRadians = (angleInDegrees * Math.PI) / 180;
-            return Math.Sin(angleInRadians);
-
-        }
-
+        public double RpmForPoles(int poles) => 120.0 * Frequency / poles;
     }
+
 }

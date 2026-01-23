@@ -4,16 +4,22 @@ using System.Text;
 
 namespace NuclearConsole
 {
-    class Turbine
+    public class Turbine
     {
-        public int rpm;
-        public int rotPos;
-        int powerOutput; //in megawatts probably
+        public double Rpm;
+        public double AngleRad;
+        public double SteamTorque; // control input
+        public double LoadTorque;  // from generator
+        public double Inertia = 10;
 
-        public void DisplayPowerOutput(double output)
+        public void Update(double dt)
         {
+            double accel = (SteamTorque - LoadTorque) / Inertia;
+            Rpm += accel * dt;
 
-
+            double omega = Rpm * 2 * Math.PI / 60.0;
+            AngleRad += omega * dt;
         }
     }
+
 }

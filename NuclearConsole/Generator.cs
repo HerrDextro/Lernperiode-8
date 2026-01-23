@@ -4,32 +4,34 @@ using System.Text;
 
 namespace NuclearConsole
 {
-    class Generator
+    public class Generator
     {
-        int V;
-        int A;
-        public int rotPos;
-        public int powerOutput; //in megawatts probably
-        Turbine linkedTurbine;
-        public Generator(Turbine turbine, int voltage, int amperage)
+        public Turbine Turbine;
+        public int Poles;
+        public double BaseVoltage = 20000; // 20kV
+        public double Excitation = 1.0;
+
+        public bool IsConnectedToGrid;
+
+        public Generator(Turbine turbine, int poles)
         {
-            V = voltage;
-            A = amperage;
-            powerOutput = V * A;
-        }
-        public void GetTurbineRotation()
-        {
-            rotPos = linkedTurbine.rotPos;
+            Turbine = turbine;
+            Poles = poles;
         }
 
-        public void CompareRotPosPhase()
-        {
-            //compare rotation position to grid phase, if wriong, blow the generator up LOL give 2% probability of this damaging the turbines and releasing radiation
-        }
-        public void DisplayPowerOutput(double output)
-        {
+        public double Frequency => Turbine.Rpm * Poles / 120.0;
+        public double Voltage => BaseVoltage * Excitation;
+
+        public double PhaseAngle => Turbine.AngleRad; //gen.PhaseAngle % (2 * Math.PI)
 
 
+        public void Update(double dt)
+        {
+            if (IsConnectedToGrid)
+            {
+                // Grid will override RPM elsewhere
+            }
         }
     }
+
 }

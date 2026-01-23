@@ -14,7 +14,7 @@ namespace NuclearConsole
             pumps = new List<Pump>();
             for (int i = 0; i < numPumps; i++)
             {
-                pumps.Add(new Pump());
+                pumps.Add(new Pump("sp" + (i+=1))); //names pumps sp1, sp2 etc (secondary pump)
                 flowRate += pumpFlowRate;
             }
         }

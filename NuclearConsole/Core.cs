@@ -25,7 +25,14 @@ namespace NuclearConsole
             status = "Offline";
 
         }
+        public void Update(double dt)
+        {
+            //update all rods
+            foreach (var fuel in fuelRods)
+                { fuel.Update(dt); }
+        }
 
+        //implement rest of these after UI is basically done
         public double CalculateHeatOutput()
         {
             double minutes = 0;

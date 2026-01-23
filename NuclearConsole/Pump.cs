@@ -4,12 +4,14 @@ using System.Text;
 
 namespace NuclearConsole
 {
-    internal class Pump
+    public class Pump
     {
+        public string identifier;
         public string pumpStatus;
         public int flowRate;
-        public Pump()
+        public Pump(string identifier)
         {
+            this.identifier = identifier;
             pumpStatus = "Online";
             flowRate = 100; //default flow rate
         }
