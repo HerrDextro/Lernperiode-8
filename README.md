@@ -103,9 +103,8 @@ Der Benutzer kann Zustände einsehen, simulierte Aktionen auslösen und visuelle
 
 - [x] **Console Layout gestalten**
    - Alle ausprobierte Elemente von Spectre in ihrem PLatz auf dem Consolenfenster organisiert (6 Hauptblöcke, 3 Columns, 2 rows) und unten Navigation
-     
-<small>Heute habe ich die Basisfunktionen fertiggestellt, alles, was zum Laufen nötig ist, außer UI-spezifische Aktionen (z. B. FuelRods wechseln). Außerdem habe ich alle benötigten Spectre-Features in einer Testklasse ausprobiert. Jetzt kenne ich alle Features und habe ein Layout für die Console erstellt. Dieses läuft in einem GameLoop ähnlich einem Videospiel und rendert die Console jedes Frame. Es funktioniert, allerdings gibt es ein starkes Flickern, da das Layout schnell gelöscht und neu gezeichnet wird. Die dargestellten Daten sind derzeit noch Platzhalter. Als Nächstes möchte ich alle Systeme darstellen, Dialoge hinzufügen und mehrere „Tabs“ der Console ermöglichen, sowie echte Simulationsdaten verwenden.</small>
 ---
+<small>Heute habe ich die Basisfunktionen fertiggestellt, alles, was zum Laufen nötig ist, außer UI-spezifische Aktionen (z. B. FuelRods wechseln). Außerdem habe ich alle benötigten Spectre-Features in einer Testklasse ausprobiert. Jetzt kenne ich alle Features und habe ein Layout für die Console erstellt. Dieses läuft in einem GameLoop ähnlich einem Videospiel und rendert die Console jedes Frame. Es funktioniert, allerdings gibt es ein starkes Flickern, da das Layout schnell gelöscht und neu gezeichnet wird. Die dargestellten Daten sind derzeit noch Platzhalter. Als Nächstes möchte ich alle Systeme darstellen, Dialoge hinzufügen und mehrere „Tabs“ der Console ermöglichen, sowie echte Simulationsdaten verwenden.</small>
 
 ### Nächstes Mal – Arbeitspakete
 
