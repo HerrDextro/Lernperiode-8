@@ -94,7 +94,7 @@ Heute habe ich sehr viel am Backend gearbeitet. Ich habe jetzt 17 Classes wenn m
 ### 23.01.2026 – Arbeitspakete
 
 
-- [x] **SFertigmachen der Basisfunktionalität vom Code**
+- [x] **Fertigmachen der Basisfunktionalität vom Code**
    - Projekt läuft ohne errors, instanziiert Objekte richtig.
 
 - [x] **Erweiterte Visualisierung**
