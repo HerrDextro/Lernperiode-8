@@ -105,7 +105,7 @@ Heute habe ich sehr viel am Backend gearbeitet. Ich habe jetzt 17 Classes wenn m
 
 - [x] **Console Layout gestalten**
    - Alle ausprobierte Elemente von Spectre in ihrem PLatz auf dem Consolenfenster organisiert (6 Hauptblöcke, 3 Columns, 2 rows) und unten Navigation
-
+     
 Heute habe ich die basisfunktionnen vom Code alle fertig gemacht, also alles was es brauch zum laufen, asser das, wofür mann das UI brauch (ZB, FuelRods wechseln). Auch habe ich Alle Spectre Features, die ich brauchen möchte, im TestClass.cs ausprobiert. Jetzt wo ich die alle kenn, habe ich ein Layout für die Console gemacht, der alles in ihrem Platz setzt. Dieses ist auch nicht mehr im Testclass sonder jetzt habe ich wie in ein VideoSpiel ein GameLoop, und rendere Der Console jedes Frame. Es funktioniert, aber leider hat es ein schlimmes "Flicker" da es so schnell gerendert und dann wieder gelöscht wird, jedes Frame. Auch sind die Daten, die jetzt dargestellt werden, nicht alle aktuelle Daten der Simulation, aber placeholders. Als nächstes möchte ich alle Systemen darstellen, Dialoge hinzufügen und mehrere "tabs" der Console irgendwie ermöglichen. Auch möchte ich dann die echte Simulationsdaten verwenden.
 ---
 
