@@ -86,10 +86,8 @@ Der Benutzer kann Zustände einsehen, simulierte Aktionen auslösen und visuelle
 
 - [x] **Testlauf**
    - Sicherstellen, dass Layout, Farben und Darstellung stabil funktionieren
-
-
-<small>Heute habe ich viel am "Backend" gearbeitet. Ich habe jetzt 17 Klassen, wenn man die MSTest-Settings nicht mitzählt. Ich habe die Klassen mit MSTest getestet, um später keine Probleme zu bekommen. Da der Punkt dieser Lernperiode nicht das Backend ist, sondern Spectre.Console, habe ich verschiedene Funktionen ausprobiert, um ein (nicht realistisches) Reaktor-Strahlungsdiagramm zu erstellen.</small>
 ---
+<small>Heute habe ich viel am "Backend" gearbeitet. Ich habe jetzt 17 Klassen, wenn man die MSTest-Settings nicht mitzählt. Ich habe die Klassen mit MSTest getestet, um später keine Probleme zu bekommen. Da der Punkt dieser Lernperiode nicht das Backend ist, sondern Spectre.Console, habe ich verschiedene Funktionen ausprobiert, um ein (nicht realistisches) Reaktor-Strahlungsdiagramm zu erstellen.</small>
 
 ### 23.01.2026 – Arbeitspakete
 
